@@ -62,7 +62,7 @@ mapSocket.onopen = function (e) {
 mapSocket.onmessage = function (event) {
   const data = JSON.parse(event.data);
   const utilization = data.usage_rate;
-  const radius_size = data.spot_in_use; // Assuming the utilization value is in the message
+  const radius_size = data.spots_in_use; // Assuming the utilization value is in the message
   updateMarker(utilization, radius_size);
 };
 
