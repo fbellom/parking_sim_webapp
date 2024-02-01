@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parking Activity Monitor</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="resources/css/style.css" />
+  </head>
+  <body>
+    <h1>Parking Activity Monitor</h1>
+    <div id="map" class="map"></div>
+
+    <!-- <div id="parkingUtilData">Getting Utilization Data...</div> -->
+    <div class="card" id="spotsInUse">Spots in Use: 0</div>
+    <div class="card" id="spotsAvail">Spots Available: 0</div>
+    <div class="card">
+      Usage Rate: <span id="usageRate">0%</span>
+      <div class="gauge" id="gauge"></div>
+    </div>
+
+    <div id="parkingData">
+      <table id="parkingDataTable">
+        <thead>
+          <tr>
+            <th>RFID</th>
+            <th>Size</th>
+            <th>Driver Name</th>
+            <th>Entry Time</th>
+            <th>Exit Time</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Status</th>
+            <th>Last Update</th>
+            <th>Reason</th>
+            <th>Gate ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be added here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    <!-- Libraries -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="resources/js/park_map.js"></script>
+    <script src="resources/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+#parkingData {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+/* Add your CSS styles here */
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+
+.gauge {
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: #eee;
+  border-radius: 100px 100px 0 0;
+  margin: 20px auto;
+}
+
+.gauge::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 180%; /* 100% = full gauge */
+  height: 180%;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) translateY(-100%) rotate(-0.5turn);
+}
+
+.map {
+  height: 400px;
+}
